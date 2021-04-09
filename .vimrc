@@ -2,10 +2,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+
 set updatetime=100
 set noerrorbells
 set smartindent
 set incsearch
+set completeopt-=preview
 
 colorscheme gruvbox
 set background=dark
@@ -16,6 +18,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:gitgutter_override_sign_column_highlight = 0
+let &t_ut='' "This is for the kitty terminal to stop messing up background color
 highlight SignColumn NONE
 highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
